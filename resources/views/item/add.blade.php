@@ -30,12 +30,17 @@
 
                         <div class="form-group">
                             <label for="type">種別</label>
-                            <input type="number" class="form-control" id="type" name="type" placeholder="1, 2, 3, ...">
+                            <input type="text" class="form-control" id="type" name="type" placeholder="食材、包材、消耗品">
                         </div>
 
                         <div class="form-group">
                             <label for="detail">詳細</label>
                             <input type="text" class="form-control" id="detail" name="detail" placeholder="詳細説明">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="number">個数</label>
+                            <input type="text" class="form-control" id="number" name="number" placeholder="個数">
                         </div>
                     </div>
 

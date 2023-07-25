@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $items = Item::where('number','<=',2)->paginate(3);
+        
+        //return view('home', compact('items', 'xx'));
+        return view('home', [
+            'items' => $items,
+        ]);
     }
 }
