@@ -40,7 +40,7 @@
 
                         <div class="form-group">
                             <label for="number">個数</label>
-                            <input type="text" class="form-control" id="number" name="number" placeholder="個数">
+                            <input type="text" pattern="^[1-9][0-9]*$" class="form-control" id="number" name="number" placeholder="個数(半角数字のみ)">
                         </div>
                     </div>
 

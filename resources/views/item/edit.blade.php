@@ -26,7 +26,7 @@
                 {{-- 商品名入力 --}}
                 <div class="form-group">
                     <label for="name">名前</label>
-                    <input type="text" class="form-control" id="name" name="name"
+                    <input type="text" pattern="[^\uFF10-\uFF19]*" class="form-control" id="name" name="name" required
                         value="{{ old('name', $items->name) }}" placeholder="商品名" />
                 </div>
                 {{-- 価格入力 --}}
@@ -44,7 +44,7 @@
 
                 <div class="form-group">
                     <label for="number">個数</label>
-                    <input type="text" class="form-control" id="number" name="number"
+                    <input type="text" pattern="^[1-9][0-9]*$" class="form-control" id="number" name="number"
                         value="{{ old('number', $items->number) }}" placeholder="個数" />
                 </div>
             </div>

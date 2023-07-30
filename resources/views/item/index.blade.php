@@ -20,6 +20,13 @@
                         </div>
                     </div>
                 </div>
+        <body>
+            <form action="{{ route('items.index') }}" method="GET">
+                @csrf
+                <input type="text" pattern="[^\uFF10-\uFF19]*" name="keyword" value="{{ $keyword }}" placeholder="名前、種別、個数(半角)"> 
+                <input type="submit" value="検索">
+            </form>
+        </body>
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap">
                         <thead>

@@ -23,16 +23,22 @@ class ItemController extends Controller
     /**
      * 商品一覧
      */
-    public function index()
+    public function index(Request $request)
     {
+        $keyword = $request->input('keyword'); 
+        //dump($keyword);
+         if(isset($keyword)){
+            $items = Item::where('name', $keyword)
+            ->orwhere('number',$keyword)
+            ->orwhere('type',$keyword)
+            ->paginate(4);
+          }else{
+            $items = Item::paginate(4);
+          }
     
-	$items = Item::paginate(4);
-        $this->data['items'] = $items;
-
-        return view('item.index', $this->data);
+         return view('item.index', compact('keyword','items'));
+            
     }
-    
-
 
     /**
      * 商品登録
