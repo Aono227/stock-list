@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <label for="number">個数</label>
                     <input type="text" pattern="^[1-9][0-9]*$" class="form-control" id="number" name="number"
-                        value="{{ old('number', $items->number) }}" placeholder="個数" />
+                        value="{{ old('number', $items->number) }}" placeholder="個数(半角数字のみ)" />
                 </div>
             </div>
             <div class="card-footer">
